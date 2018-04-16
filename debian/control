@@ -24,7 +24,7 @@ Vcs-Git: https://salsa.debian.org/android-tools-team/android-platform-system-cor
 Vcs-Browser: https://salsa.debian.org/android-tools-team/android-platform-system-core
 
 Package: android-tools-fsutils
-Depends: android-sdk-libsparse-utils, android-sdk-ext4-utils, simg2img, ${shlibs:Depends}, ${misc:Depends}
+Depends: android-sdk-libsparse-utils, android-sdk-ext4-utils, ${shlibs:Depends}, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
@@ -267,16 +267,6 @@ Provides: android-tools-fastboot
 Description: Android fastboot tool
  A command line tool for flashing an Android device, boot an Android device to
  fastboot mode, etc..
-
-Package: simg2img
-Architecture: amd64 i386
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Breaks: android-tools-fsutils (<< 5.1.1.r38-1.1~)
-Replaces: android-tools-fsutils (<< 5.1.1.r38-1.1~)
-Description: Android sparse image conversion tool
- A command line tool to convert sparse images to raw images, which can then
- be manipulated with the standard tools.
-
 
 Package: append2simg
 Architecture: amd64 i386
